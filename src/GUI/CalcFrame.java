@@ -108,12 +108,14 @@ public class CalcFrame extends JFrame {
 		EXPNode lacrima = new EXPNode("Lacrima");
 		EXPNode gaiden = new EXPNode("Gaiden");
 		EXPNode ilcoron = new EXPNode("Ilcoron");
+		EXPNode nafdar = new EXPNode("Nafdar");
 		midgard.add(fafnir);
 		midgard.add(brock);
 		midgard.add(luana);
 		midgard.add(lacrima);
 		midgard.add(gaiden);
 		midgard.add(ilcoron);
+		midgard.add(nafdar);
 	}
 
 	public void initializeMenuBar() {
@@ -157,7 +159,7 @@ public class CalcFrame extends JFrame {
 		// West Panel
 		west = new JPanel(new GridLayout(2, 2));
 		west.add(new JLabel("Wähle Charakter: "));
-		String[] chars = { "Fafnir", "Brock", "Luana", "Lacrima", "Gaiden", "Ilcoron" };
+		String[] chars = { "Fafnir", "Brock", "Luana", "Lacrima", "Gaiden", "Ilcoron", "Nafdar" };
 		character = new JComboBox<String>(chars);
 		west.add(character);
 		west.add(new JLabel("Wähle Aktion: "));
