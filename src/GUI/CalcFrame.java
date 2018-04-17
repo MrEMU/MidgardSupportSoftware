@@ -16,6 +16,8 @@ public class CalcFrame extends JFrame {
 	JMenuItem table;
 	JMenuItem reset;
 
+	JMenuItem EXPTableManager;
+
 	JPanel EXPTable;
 	JTable exp;
 
@@ -118,12 +120,18 @@ public class CalcFrame extends JFrame {
 		midgard.add(nafdar);
 	}
 
+	public void showEXPTableManager() {
+		new EXPTableManager(this).setVisible(true);
+	}
+
 	public void initializeMenuBar() {
 		// MenuBar and Items
 		menubar = new JMenuBar();
+
 		start = new JMenu("Start");
 		start.setMnemonic(KeyEvent.VK_A);
 		start.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
+
 		rechner = new JMenuItem("Rechner");
 		rechner.addActionListener(new ActionListener() {
 			@Override
@@ -131,6 +139,7 @@ public class CalcFrame extends JFrame {
 				changeContentPane(mainPanel);
 			}
 		});
+
 		table = new JMenuItem("EXP Table");
 		table.addActionListener(new ActionListener() {
 			@Override
@@ -139,6 +148,7 @@ public class CalcFrame extends JFrame {
 				changeContentPane(EXPTable);
 			}
 		});
+
 		reset = new JMenuItem("Reset");
 		reset.addActionListener(new ActionListener() {
 			@Override
@@ -148,10 +158,22 @@ public class CalcFrame extends JFrame {
 				changeContentPane(EXPTable);
 			}
 		});
+
+		EXPTableManager = new JMenuItem("Charaktere Verwalten");
+		EXPTableManager.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				showEXPTableManager();
+			}
+		});
+
+		// Add items to menubar
 		menubar.add(start);
 		start.add(rechner);
 		start.add(table);
 		start.add(reset);
+		menubar.add(EXPTableManager);
+
 		setJMenuBar(menubar);
 	}
 
@@ -159,7 +181,7 @@ public class CalcFrame extends JFrame {
 		// West Panel
 		west = new JPanel(new GridLayout(2, 2));
 		west.add(new JLabel("Wähle Charakter: "));
-		String[] chars = { "Fafnir", "Brock", "Luana", "Lacrima", "Gaiden", "Ilcoron", "Nafdar" };
+		String[] chars = midgard.getNames();
 		character = new JComboBox<String>(chars);
 		west.add(character);
 		west.add(new JLabel("Wähle Aktion: "));

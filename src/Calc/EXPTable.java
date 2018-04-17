@@ -19,6 +19,14 @@ public class EXPTable extends ArrayList<EXPNode>  {
 		}
 		return data;
 	}
+
+	public String[] getNames() {
+		String[] names = new String[this.size()];
+		for(int i = 0; i < this.size(); i++) {
+			names[i] = this.get(i).getName();
+		}
+		return names;
+	}
 	
 	public void resetData(){
 		this.forEach(node -> node.setExp(0));
