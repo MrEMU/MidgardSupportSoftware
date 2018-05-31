@@ -1,4 +1,4 @@
-package expCalc.calc;
+package main.java.expCalc.calc;
 
 public class EXPNode {
 

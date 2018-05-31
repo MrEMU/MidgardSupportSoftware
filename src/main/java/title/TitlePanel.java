@@ -1,7 +1,7 @@
-package title;
+package main.java.title;
 
-import expCalc.gui.CalcFrame;
-import plants.PlantFrame;
+import main.java.expCalc.gui.CalcFrame;
+import main.java.plants.PlantFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +13,7 @@ import java.io.IOException;
 public class TitlePanel extends JPanel {
 
     TitleFrame title;
-    String path = "ressource/";
+    String path = "src/main/resources/";
 
     JButton exp;
     JButton plants;

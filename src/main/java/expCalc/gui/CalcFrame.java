@@ -1,14 +1,16 @@
-package expCalc.gui;
+package main.java.expCalc.gui;
 
+import main.java.expCalc.calc.Calculator;
+import main.java.expCalc.calc.EXPNode;
+import main.java.expCalc.calc.EXPTable;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
-
-import expCalc.calc.*;
 
 public class CalcFrame extends JFrame {
 
-	static EXPTable midgard;
+	static main.java.expCalc.calc.EXPTable midgard;
 
 	JMenuBar menubar;
 	JMenu start;

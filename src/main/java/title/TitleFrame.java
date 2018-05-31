@@ -1,4 +1,4 @@
-package title;
+package main.java.title;
 
 import javax.swing.*;
 import java.awt.*;

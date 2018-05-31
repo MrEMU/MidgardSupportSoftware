@@ -1,6 +1,6 @@
-package plants;
+package main.java.plants;
 
-import util.PlantRessources;
+import main.java.util.PlantRessources;
 
 import javax.swing.*;
 import java.awt.*;

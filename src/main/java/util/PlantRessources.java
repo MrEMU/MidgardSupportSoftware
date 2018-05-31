@@ -1,4 +1,4 @@
-package util;
+package main.java.util;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class PlantRessources {
     private static ArrayList<String> mountains = new ArrayList<>();
     private static ArrayList<String> special = new ArrayList<>();
 
-    static String path = "ressource/";
+    static String path = "src/main/resources/";
 
     public static void init() {
         readIn(garden, new File(path + "garden.txt"));
