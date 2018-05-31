@@ -58,6 +58,9 @@ public class CalcFrame extends JFrame {
 	// Constructor to setup the GUI components
 	public CalcFrame() {
 
+		midgard = new EXPTable();
+		initiateTable(midgard);
+
 		initializeMenuBar();
 
 		// MainPanel
@@ -97,7 +100,7 @@ public class CalcFrame extends JFrame {
 		setContentPane(mainPanel);
 		setTitle("Midgard EXP Calculator");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		setBounds(0, 0, screenSize.width / 2, screenSize.height / 2);
+		setBounds(screenSize.width / 4, screenSize.height / 4, screenSize.width / 2, screenSize.height / 2);
 		pack();
 		setVisible(true);
 	}
@@ -429,20 +432,6 @@ public class CalcFrame extends JFrame {
 		exp.setEnabled(false);
 		EXPTable.removeAll();
 		EXPTable.add(exp);
-	}
-
-	//Main
-	public static void main(String[] args) {
-		// Initialization
-		midgard = new EXPTable();
-		initiateTable(midgard);
-		// Invoke the constructor (to setup the GUI) by allocating an instance
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				new CalcFrame(); // Let the constructor do the job
-			}
-		});
 	}
 
 }
