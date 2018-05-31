@@ -14,7 +14,7 @@ public class PlantFrame extends JFrame {
         PlantRessources.init();
         setContentPane(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Midgard Kräuter Generator");
+        setTitle("Midgard Kr\u00e4uter Generator");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         setBounds(screenSize.width / 4, screenSize.height / 4, screenSize.width / 4, screenSize.height / 4);
         setPreferredSize(new Dimension(screenSize.width / 4, screenSize.height / 4));
