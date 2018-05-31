@@ -84,7 +84,11 @@ public class TitlePanel extends JPanel {
         weather.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    Desktop.getDesktop().open(new File("ressource/Wetter.pdf"));
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }
