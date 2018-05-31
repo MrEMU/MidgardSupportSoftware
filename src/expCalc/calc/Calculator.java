@@ -1,4 +1,4 @@
-package EXPCalc.Calc;
+package expCalc.calc;
 
 public class Calculator {
 	

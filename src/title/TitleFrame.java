@@ -1,4 +1,4 @@
-package Title;
+package title;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,7 +23,7 @@ public class TitleFrame extends JFrame {
 
     //Main
     public static void main(String[] args) {
-        // Invoke the constructor (to setup the GUI) by allocating an instance
+        // Invoke the constructor (to setup the gui) by allocating an instance
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {

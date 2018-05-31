@@ -1,6 +1,6 @@
-package EXPCalc.GUI;
+package expCalc.gui;
 
-import EXPCalc.Calc.EXPNode;
+import expCalc.calc.EXPNode;
 
 import javax.swing.*;
 import java.awt.*;

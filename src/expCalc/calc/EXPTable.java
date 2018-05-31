@@ -1,4 +1,4 @@
-package EXPCalc.Calc;
+package expCalc.calc;
 
 import java.util.ArrayList;
 

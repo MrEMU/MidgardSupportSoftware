@@ -1,10 +1,10 @@
-package EXPCalc.GUI;
+package expCalc.gui;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import EXPCalc.Calc.*;
+import expCalc.calc.*;
 
 public class CalcFrame extends JFrame {
 
@@ -55,7 +55,7 @@ public class CalcFrame extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	// Constructor to setup the GUI components
+	// Constructor to setup the gui components
 	public CalcFrame() {
 
 		midgard = new EXPTable();
@@ -102,6 +102,7 @@ public class CalcFrame extends JFrame {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		setBounds(screenSize.width / 4, screenSize.height / 4, screenSize.width / 2, screenSize.height / 2);
 		pack();
+		setResizable(false);
 		setVisible(true);
 	}
 
@@ -183,11 +184,11 @@ public class CalcFrame extends JFrame {
 	public void initializeWestPanel() {
 		// West Panel
 		west = new JPanel(new GridLayout(2, 2));
-		west.add(new JLabel("W�hle Charakter: "));
+		west.add(new JLabel("W\u00e4hle Charakter: "));
 		String[] chars = midgard.getNames();
 		character = new JComboBox<String>(chars);
 		west.add(character);
-		west.add(new JLabel("W�hle Aktion: "));
+		west.add(new JLabel("W\u00e4hle Aktion: "));
 		String[] actions = { "Nahkampf", "Zauber/Fernkampf", "Fertigkeit", "Heilzauber", "anderer Zauber" };
 		JComboBox<String> actionType = new JComboBox<String>(actions);
 		actionType.addActionListener(new ActionListener() {
@@ -220,7 +221,7 @@ public class CalcFrame extends JFrame {
 		closeCombat.add(grad);
 		monsterkill = new JCheckBox("Monsterkill");
 		closeCombat.add(monsterkill);
-		combatcalc = new JButton("Hinzuf�gen");
+		combatcalc = new JButton("Hinzuf\u00fcgen");
 		combatcalc.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -245,7 +246,7 @@ public class CalcFrame extends JFrame {
 		cast.add(monsterkill);
 		cast.add(new JLabel("   "));
 		cast.remove(5);
-		castcalc = new JButton("Hinzuf�gen");
+		castcalc = new JButton("Hinzuf\u00fcgen");
 		castcalc.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -258,7 +259,7 @@ public class CalcFrame extends JFrame {
 		// Ability Center Panel
 		ability = new JPanel(new GridLayout(3,1));
 		ability.add(new JLabel("    "));
-		addAbilityExp = new JButton("Fertigkeit ausgef�hrt");
+		addAbilityExp = new JButton("Fertigkeit ausgef\u00fchrt");
 		addAbilityExp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -278,7 +279,7 @@ public class CalcFrame extends JFrame {
 		heal.add(ap);
 		rescue = new JCheckBox("Life Rescue");
 		heal.add(rescue);
-		healcalc = new JButton("Hinzuf�gen");
+		healcalc = new JButton("Hinzuf\u00fcgen");
 		healcalc.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -294,7 +295,7 @@ public class CalcFrame extends JFrame {
 		ap = new JTextField(5);
 		util.add(ap);
 		util.add(new JLabel("     "));
-		utilcalc = new JButton("Hinzuf�gen");
+		utilcalc = new JButton("Hinzuf\u00fcgen");
 		utilcalc.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -408,7 +409,7 @@ public class CalcFrame extends JFrame {
 	//Hilfsfunktionen
 	public static String descriptionHandler(String type) {
 		if (type == "Nahkampf")
-			return "Es wurde ein Nahkampfangriff ausgef�hrt.";
+			return "Es wurde ein Nahkampfangriff ausgef\u00fchrt.";
 		if (type == "Zauber/Fernkampf")
 			return "Es wurde ein Angriffszauber oder eine Fernkampfwaffe verwendet.";
 		if (type == "Fertigkeit")
