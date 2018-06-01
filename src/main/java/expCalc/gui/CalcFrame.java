@@ -98,7 +98,7 @@ public class CalcFrame extends JFrame {
 		exp.setEnabled(false);
 		EXPTable.add(exp);
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setContentPane(mainPanel);
 		setTitle("Midgard EXP Calculator");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

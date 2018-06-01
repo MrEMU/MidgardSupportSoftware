@@ -66,7 +66,12 @@ public class TitlePanel extends JPanel {
         exp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new CalcFrame();
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new CalcFrame(); // Let the constructor do the job
+                    }
+                });
             }
         });
         plants.addActionListener(new ActionListener() {
