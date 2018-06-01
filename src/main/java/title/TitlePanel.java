@@ -77,13 +77,18 @@ public class TitlePanel extends JPanel {
         plants.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new PlantFrame();
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new PlantFrame(); // Let the constructor do the job
+                    }
+                });
             }
         });
         animals.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new ErrorDialog();
             }
         });
         weather.addActionListener(new ActionListener() {

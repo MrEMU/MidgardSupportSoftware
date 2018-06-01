@@ -10,7 +10,7 @@ public class TitleFrame extends JFrame {
      public TitleFrame() {
          panel = new TitlePanel(this);
          setContentPane(panel);
-         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          setTitle("Midgard Support Software");
          Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
          setBounds(screenSize.width / 4, screenSize.height / 4, screenSize.width / 2, screenSize.height / 2);
