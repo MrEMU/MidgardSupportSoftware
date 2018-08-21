@@ -1,5 +1,6 @@
 package main.java.title;
 
+import main.java.creatures.CreatureFrame;
 import main.java.expCalc.gui.CalcFrame;
 import main.java.plants.PlantFrame;
 
@@ -17,7 +18,7 @@ public class TitlePanel extends JPanel {
 
     JButton exp;
     JButton plants;
-    JButton animals;
+    JButton creatures;
     JButton weather;
 
     Image header;
@@ -45,11 +46,11 @@ public class TitlePanel extends JPanel {
         plants.setSize(200, 40);
         plants.setLocation(235, 230);
         plants.setVisible(true);
-        animals = new JButton("Tier Generator");
-        animals.setFont(new Font("Times new Roman", 0, 20));
-        animals.setSize(200, 40);
-        animals.setLocation(235, 280);
-        animals.setVisible(true);
+        creatures = new JButton("Kreaturen Lexikon");
+        creatures.setFont(new Font("Times new Roman", 0, 20));
+        creatures.setSize(200, 40);
+        creatures.setLocation(235, 280);
+        creatures.setVisible(true);
         weather = new JButton("Wetter Generator");
         weather.setFont(new Font("Times new Roman", 0, 20));
         weather.setSize(200, 40);
@@ -58,7 +59,7 @@ public class TitlePanel extends JPanel {
 
         add(exp);
         add(plants);
-        add(animals);
+        add(creatures);
         add(weather);
     }
 
@@ -85,10 +86,15 @@ public class TitlePanel extends JPanel {
                 });
             }
         });
-        animals.addActionListener(new ActionListener() {
+        creatures.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ErrorDialog();
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new CreatureFrame(); // Let the constructor do the job
+                    }
+                });
             }
         });
         weather.addActionListener(new ActionListener() {
