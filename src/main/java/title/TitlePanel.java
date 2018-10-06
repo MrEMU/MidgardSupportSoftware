@@ -1,5 +1,6 @@
 package main.java.title;
 
+import main.java.control.Companion;
 import main.java.creatures.CreatureFrame;
 import main.java.expCalc.gui.CalcFrame;
 import main.java.plants.PlantFrame;
@@ -20,6 +21,7 @@ public class TitlePanel extends JPanel {
     JButton plants;
     JButton creatures;
     JButton weather;
+    JButton companion;
 
     Image header;
 
@@ -56,11 +58,17 @@ public class TitlePanel extends JPanel {
         weather.setSize(200, 40);
         weather.setLocation(235, 330);
         weather.setVisible(true);
+        companion = new JButton("Companion");
+        companion.setFont(new Font("Times new Roman", 0, 20));
+        companion.setSize(200, 40);
+        companion.setLocation(235, 380);
+        companion.setVisible(true);
 
         add(exp);
         add(plants);
         add(creatures);
         add(weather);
+        add(companion);
     }
 
     private void initListeners() {
@@ -105,6 +113,13 @@ public class TitlePanel extends JPanel {
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
+            }
+        });
+        
+        companion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Companion.launchCompanion();
             }
         });
     }
