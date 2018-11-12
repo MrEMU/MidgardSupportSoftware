@@ -1,5 +1,7 @@
 package main.java.view.main.menuButtons;
 
+import java.io.File;
+
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -20,9 +22,15 @@ public class MenuButtonIconText extends Button{
 		txt = new Label();
 		imgV.setImage(i);
 		txt.setText(text);
-		this.getChildren().add(imgV);
+		//this.getChildren().add(imgV);
 		this.getChildren().add(txt);
 		this.setOnAction(e);
+		this.setText("Maps");
+		this.setGraphic(imgV);
+		File css = new File("src/main/styles/menu.css");
+		this.getStyleClass().add("menu");
+		this.getStylesheets().add("file:///"+css.getAbsolutePath().replace("\\", "/"));
+
 
 	}
 

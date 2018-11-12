@@ -19,11 +19,16 @@ public class MenuBar extends HBox{
 	public MenuBar(){
 		Image openMapIconImg;
 		try {
-			openMapIconImg = new Image(new FileInputStream("C:\\Users\\Stef\\Desktop\\upload.png"));
+			File f = new File("src/main/icons/upload.png");
+			openMapIconImg = new Image(new FileInputStream(f.getAbsolutePath()));
 			String openMapIconText = "Open";
 			MenuButtonIconText b = new MenuButtonIconText(openMapIconImg, openMapIconText, new AddNewMapEvent<ActionEvent>() );
 
 			this.getChildren().add(b);
+
+			File css = new File("src/main/styles/menu.css");
+			this.getStyleClass().add("menu");
+			this.getStylesheets().add("file:///"+css.getAbsolutePath().replace("\\", "/"));
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

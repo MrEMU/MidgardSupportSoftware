@@ -1,0 +1,13 @@
+.button{
+	-fx-background-color: #000000;
+	-fx-font-size: 25;
+
+}
+
+.button:hover{
+	-fx-background-color: #EEEEEE;
+}
+
+.menu{
+	-fx-background-color: #FFFFFF;
+}
