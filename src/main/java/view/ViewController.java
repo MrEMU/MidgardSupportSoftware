@@ -82,4 +82,16 @@ public class ViewController extends Application {
 
 	}
 
+	public static MenuBar getBar() {
+		return bar;
+	}
+
+	public static LinkedList<Node> getViews() {
+		return views;
+	}
+
+	public static MapView getMapView() {
+		return mapView;
+	}
+
 }
