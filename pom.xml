@@ -41,7 +41,7 @@
           <archive>
             <index>true</index>
             <manifest>
-              <mainClass>main.java.title.TitleFrame</mainClass>
+              <mainClass>main.java.title.TitleFX</mainClass>
             </manifest>
           </archive>
         </configuration>
