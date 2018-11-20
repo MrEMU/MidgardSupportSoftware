@@ -26,15 +26,17 @@ public class MapView extends ImageView {
 		Stage tmp = new Stage();
 		FileChooser fC = new FileChooser();
 		File f = fC.showOpenDialog(tmp);
-		try {
-			Image img = new Image(new FileInputStream(f));
-			images.add(img);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SecurityException e){
-			//TODO catch security err
-			e.printStackTrace();
+		if (f != null){
+			try {
+				Image img = new Image(new FileInputStream(f));
+				images.add(img);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SecurityException e){
+				//TODO catch security err
+				e.printStackTrace();
+			}
 		}
 	}
 
