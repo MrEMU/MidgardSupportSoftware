@@ -5,11 +5,11 @@ public class Creature {
     private String country;
     private String species;
     private String type;
-    private String[] habitat;
+    private String habitat;
     private String alternatives;
     private String source;
 
-    public Creature(String continent, String country, String species, String type, String[] habitat, String alternatives, String source) {
+    public Creature(String continent, String country, String species, String type, String habitat, String alternatives, String source) {
         this.continent = continent;
         this.country = country;
         this.species = species;
@@ -21,7 +21,7 @@ public class Creature {
 
     public String toString(){
         String out = "";
-        if(continent.equals("Sonstiges")){
+        if(continent.equals("'Sonstiges'")){
             out += continent + "\n";
             out += "Kategorie: " + country + "\n";
         }else{
@@ -68,11 +68,11 @@ public class Creature {
         this.type = type;
     }
 
-    public String[] getHabitat() {
+    public String getHabitat() {
         return habitat;
     }
 
-    public void setHabitat(String[] habitat) {
+    public void setHabitat(String habitat) {
         this.habitat = habitat;
     }
 

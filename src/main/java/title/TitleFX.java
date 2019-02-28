@@ -11,9 +11,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import main.java.control.Settings;
-import main.java.creatures.CreatureFrame;
+import main.java.creatures.*;
 import main.java.expCalc.gui.CalcFrame;
 import main.java.plants.PlantFrame;
+import main.java.util.Creature;
 import main.java.view.EditView;
 import main.java.view.ViewController;
 
@@ -116,12 +117,11 @@ public class TitleFX extends Application {
         creatures.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent arg0) {
-                SwingUtilities.invokeLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        new CreatureFrame(); // Let the constructor do the job
-                    }
-                });
+                try{
+                    new CreatureFX().start(new Stage());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         creatures.setMinWidth(200);
